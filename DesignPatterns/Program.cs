@@ -1,16 +1,8 @@
-﻿// Encapsulation
+﻿// Abstraction
 
-using DesignPatterns.OOPPrinciples.Encapsulation;
+// Reduce complexity by hiding unnecessary details
 
-BadBankAccount badBankAccount = new BadBankAccount();
-badBankAccount.balance = 100;
-Console.WriteLine(badBankAccount.balance);
+using DesignPatterns.OOPPrinciples.Abstraction;
 
-BankAccount bankAccount = new BankAccount(100);
-Console.WriteLine(bankAccount.GetBalance());
-
-bankAccount.Deposit(50);
-Console.WriteLine(bankAccount.GetBalance());
-
-bankAccount.Withdraw(70);
-Console.WriteLine(bankAccount.GetBalance());
+EmailService emailService = new EmailService();
+emailService.SendEmail();
