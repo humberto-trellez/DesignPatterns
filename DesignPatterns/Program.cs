@@ -1,8 +1,6 @@
-﻿// Coupling
+﻿// Single Responsibility Principle (SRP)
 
-// The degree of dependency between different classes
-
-using DesignPatterns.OOPPrinciples.Coupling;
-
-var order = new Order(new SmsSender());
-order.PlaceHolder();
+/*
+ * A class should have only one reason to change, meaning that it should have only one
+ * responsibility or purpose.
+ */
