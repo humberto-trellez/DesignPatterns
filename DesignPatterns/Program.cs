@@ -1,6 +1,6 @@
-﻿// Single Responsibility Principle (SRP)
+﻿// Open/Closed Principle (OCP)
 
 /*
- * A class should have only one reason to change, meaning that it should have only one
- * responsibility or purpose.
+ * Software entities (classes, modules, functions, etc.) should be open for extension but
+ * closed for modification.
  */
