@@ -1,24 +1,14 @@
-﻿// Memento
+﻿// State pattern
 
-// The Memento Pattern is used to restore an object to previous state.
+using DesignPatterns.DesignPatterns.State;
+using Document = DesignPatterns.DesignPatterns.State.GoodSolution.Document;
 
-using DesignPatterns.DesignPatterns.Behavioral.Memento;
+var doc = new Document(UserRoles.Admin);
+Console.WriteLine(doc.State);
 
-var editor = new Editor();
-var history = new History(editor);
+doc.Publish();
+Console.WriteLine(doc.State);
 
-history.Backup();
-editor.Title = "Test";
-history.Backup();
-editor.Content = "Hello there, my name is Lalo";
-history.Backup();
-editor.Title = "The life of dev: my mementos";
+doc.Publish();
+Console.WriteLine(doc.State);
 
-Console.WriteLine("Title: " + editor.Title);
-Console.WriteLine("Content: " + editor.Content);
-
-history.Undo();
-Console.WriteLine("Title: " + editor.Title);
-Console.WriteLine("Content: " + editor.Content);
-
-history.ShowHistory();
